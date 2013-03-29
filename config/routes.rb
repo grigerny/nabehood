@@ -1,7 +1,9 @@
 Nabehood::Application.routes.draw do
-  resources :cities
 
-
+  resources :cities do 
+    resources :nabes
+  end  
+  
   get "start/index"
 
   # The priority is based upon order of creation:
