@@ -14,13 +14,35 @@
 </div>		
 
 <div class="row-fluid">
+	<div class="span6">
 	<div id="nabe-map">
-		<iframe width='960' height='300' frameBorder='0' src='http://api.tiles.mapbox.com/v3/grigerny.<%= 		"#{@nabe.mapid}"%>/mm/zoompan.html'></iframe>
+		<iframe width='450' height='300' frameBorder='0' src='http://api.tiles.mapbox.com/v3/grigerny.<%= 		"#{@nabe.mapid}"%>/mm/zoompan.html'></iframe>
 	</div>	
+	</div>
+
+	<div class="span6">
+		<script type='text/javascript'>
+		var ws_wsid = '572c8f71213c4ea4af64d0e7fc6749fa';
+		var ws_address = '<%="#{@nabe.name}"%>, NY';
+		var ws_width = '500';
+		var ws_height = '320';
+		var ws_layout = 'horizontal';
+		var ws_commute = 'true';
+		var ws_transit_score = 'true';
+		var ws_map_modules = 'all';
+		</script><style type='text/css'>#ws-walkscore-tile{position:relative;text-align:left}#ws-walkscore-tile 	*{float:none;}#ws-footer a,#ws-footer a:link{font:11px/14px Verdana,Arial,Helvetica,sans-serif;margin-right:6px;white-space:nowrap;padding:0;color:#000;font-weight:bold;text-decoration:none}#ws-footer a:hover{color:#777;text-decoration:none}#ws-footer a:active{color:#b14900}</style><div id='ws-walkscore-tile'><div id='ws-footer' style='position:absolute;top:282px;left:8px;width:488px'></div></div><script type='text/javascript' src='http://www.walkscore.com/tile/show-walkscore-tile.php'></script>
+	</div>
 </div>	
-	
+
 <div class="row-fluid">
 	<div id="nabe-heading">
 		Known For
 	</div>
 </div>
+
+<div class="row-fluid">
+	<div id="nabe-category">
+		Family<br><br>
+		Bars
+	</div>	
+</div>	
