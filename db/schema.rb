@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329033453) do
+ActiveRecord::Schema.define(:version => 20130329193443) do
 
   create_table "cities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130329033453) do
     t.datetime "updated_at", :null => false
     t.string   "name"
     t.integer  "city_id"
+    t.string   "mapid"
   end
 
 end
