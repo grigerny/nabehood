@@ -1,5 +1,7 @@
 Nabehood::Application.routes.draw do
 
+  devise_for :users
+
   resources :cities do 
     resources :nabes
   end  
