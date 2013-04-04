@@ -24,6 +24,7 @@ gem 'jquery-rails'
 gem 'thin'
 gem "twitter-bootstrap-rails"
 gem 'devise'
+gem 'omniauth-foursquare'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
