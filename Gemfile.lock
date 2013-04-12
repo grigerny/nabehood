@@ -51,6 +51,12 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    foursquare2 (1.9.5)
+      faraday (~> 0.8)
+      faraday_middleware (>= 0.8)
+      hashie (~> 1.0)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.2.0)
@@ -157,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  foursquare2
   jquery-rails
   omniauth-foursquare
   pg

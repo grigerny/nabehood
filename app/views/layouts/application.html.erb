@@ -6,9 +6,11 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 <script src="//unslider.com/unslider.min.js"></script>
+<script src="jquery.slides.min.js"></script>
+
 </head>
 <body>
-<div class="container">
+
 	<% if user_signed_in? %>
 	  Logged in as <strong><%= current_user.username %></strong>.
 	  <%= link_to 'Edit profile', edit_user_registration_path %> |
@@ -23,14 +25,6 @@
 
 	<div class="row-fluid">
 		<div class="span12">
-			<div class="heading">
-				Nabehood.com
-			</div>
-		</div>
-	</div>
-
-	<div class="row-fluid">
-		<div class="span12">
 			<div id="bar1">
 			</div>
 		</div>	
@@ -39,7 +33,7 @@
 
 <%= yield %>
 
-</div>
+
 
 </body>
 </html>

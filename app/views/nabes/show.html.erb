@@ -2,149 +2,118 @@
 
 <div class="row-fluid">
 	<div id="nabe-heading">
-		<%= @nabe.name %>
+		Brooklyn | <%= @nabe.name %>
 	</div>
-</div>		
+</div>	
+
 
 <div class="row-fluid">
-	<div class="span12">
+	
+	<div class="span4">
 		<div id="cover-photo">
-			<a href="http://www.flickr.com/photos/violettalough/5795127998/" title="Hinsch by Violette79, on Flickr"><img src="http://farm3.staticflickr.com/2011/5795127998_87f6e3823a_b.jpg" width="960" height="800" alt="Hinsch"></a>
+			<a href="http://www.flickr.com/photos/violettalough/5795127998/" title="Hinsch by Violette79, on Flickr"><img src="http://farm3.staticflickr.com/2011/5795127998_87f6e3823a_b.jpg" width="100%" height="100%" alt="Hinsch"></a>			
+		</div>		
+	</div>
+	
+	<div class="span8">
 			<div class="nabe-summary">
 				<div class='spacer'>
 				Safe, quiet, and diverse with good public schools, plenty of parks and a lively nightlife. The commute to Manhattan can take 40-50 minutes which keeps house values and rent prices low. 
 				</div>
-				</div>
-		</div>	
-	</div>		
-</div>		
+			</div>
 
-<div class="row-fluid">
-	<div id="nabe-heading">
-		Rank
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span3">
-		<div id="nabe-category">
-		Raise a family
-		</div>		
-	</div>
+<div id="category-spacer">
 	
-	<div class="span3">
-		<div id="nabe-category">
-			Nightlife 
-		</div>		
-	</div>	
-	
-	<div class="span3">
-		<div id="nabe-category">
+			<div id="nabe-category">
 			Commute
-		</div>		
-	</div>
-	
-	<div class="span3">
-		<div id="nabe-category">
-			Green space
-		</div>		
-	</div>
-</div>	
+			</div>
 
-<div class="row-fluid">
-	<div class="span3">
-		<div id="nabe-category">
-			Pet friendly
-		</div>		
-	</div>
+			<div id="nabe-category">
+			Raise a family
+			</div>		
+
+
+			<div id="nabe-category">
+				Nightlife 
+			</div>		
+
+			<div id="nabe-category">
+				Green space
+			</div>		
+
+
+			<div id="nabe-category">
+				Pet friendly
+			</div>		
 	
-	<div class="span3">
-		<div id="nabe-category">
-			Shopping
-		</div>		
+			<div id="nabe-category">
+				Shopping
+			</div>		
+	
+			<div id="nabe-category">
+				Safety
+			</div>		
+		
+
+			<div id="nabe-category">
+				Trendy
+			</div>	
+	</div>		
+				
 	</div>	
 	
-	<div class="span3">
-		<div id="nabe-category">
-			Safety
-		</div>		
-	</div>
-	
-	<div class="span3">
-		<div id="nabe-category">
-			Trendy
-		</div>		
-	</div>
 </div>
+
+<div class="row-fluid">
+<div class="span12">
+	<div id="nabe-map">
+		<iframe width='100%' height='100%' frameBorder='0' src='http://api.tiles.mapbox.com/v3/grigerny.<%= 		"#{@nabe.mapid}"%>/mm/zoompan.html'></iframe>
+	</div>	
+</div>
+</div>
+
+
 
 <div class="row-fluid">
 	<div id="commute-heading">
-		Commute
+		<%= image_tag 'rail-underground-24.png', :size => "30x30" %> Commute
 	</div>
 </div>
 
-
-
 <div class="row-fluid">	
-	<div class="span1">
-		<div id="commute-transit-logo">
-		<%= image_tag 'rail-underground-24.png', :size => "35x35" %>
-		</div>
-	</div>	
-	
-	<div class="span11">
 		<div id="commute-transit-summary">
-			Train to Midtown Manhattan: Approx. 45-50 minutes
+			The commute to Manhattan is about 45-50 minutes
 		</div>	
 	</div>		
-</div>
+
 
 <div class="row-fluid">
-	<div class="span12">
-	<div id="nabe-map">
-		<iframe width='950' height='300' frameBorder='0' src='http://api.tiles.mapbox.com/v3/grigerny.<%= 		"#{@nabe.mapid}"%>/mm/zoompan.html'></iframe>
+	<div id="raise-family-heading">
+	Rase a family
 	</div>	
-	</div>
-
 </div>	
 
-
-<div class="row-fluid">	
-	<div class="span12">
-		<div id="stats-heading">
-		Stats
-		</div>
-	</div>	
+<div class="row-fluid">
+<div class="span8">
+			<div id="stats-sentence">
+			Population: 124,491 <br>
+			Gender: 51% Females | 49% Males <br>
+			Renting is more popular than owning <br>
+			Most residents are between 25 and 44 years old
+			</div>
+</div>
 </div>
 
-<div class="row-fluid">	
-	<div class="span12">
-		<div id="stats-sentence">
-		Population: 124,491
-		</div>
-	</div>	
-</div>
+
 
 <div class="row-fluid">	
 	<div class="span12">
-		<div id="stats-sentence">
-		Gender: 51% Females | 49% Males
-		</div>
-	</div>	
-</div>
-
-<div class="row-fluid">	
-	<div class="span12">
-		<div id="stats-sentence">
-		Renting is more popular than Owning
-		</div>
-	</div>	
-</div>
-
-<div class="row-fluid">	
-	<div class="span12">
-		<div id="stats-sentence">
-	    Most residents are between 25 and 44 years old
+		<div id="good-for-sentence">
+			<% client = Foursquare2::Client.new(:client_id => 'DRJUL4CM042G3K5XCVJBG20Z0EZXXP1D2C023MTXJGOJCIL4', :client_secret => 'KEO4EOIU2DJ2ZEZFJO0NFFJW0VANYXWFM4XBCBJ0EJDFHLH0') %>
+			<% @v = client.trending_venues('40.62,-74.02', :radius => 3000) %>
+			<% @v.venues.each do |v| %>
+			<%= v.name %><br>
+			<% end %>
 		</div>
 	</div>	
 </div>
@@ -152,23 +121,96 @@
 <div class="row-fluid">	
 	<div class="span12">
 		<div id="good-for-heading">
-		Popular places
+		Best of <%= @nabe.name%>
 		</div>
 	</div>	
 </div>
 
 <div class="row-fluid">	
 	<div class="span12">
-		<div id="good-for-sentence">
-		Restaurants and nightlife
-		</div>
-	</div>	
-</div>
+<% v = client.venue('4a0062baf964a52079701fe3') %>
+<%= v.rating%> <br>
+<%= v.location.address %><br>
+<%= v.location.city %> <%= v.location.state %> <%= v.location.postalCode %><br>
+<%= v.price.message %><br>
+<% vp = client.venue_photos('4a0062baf964a52079701fe3', :limit => 15) %>
+		<div id="nav-name">
+			<%= v.name %> 
+		</div>	
+	</div>
+</div>	
 
-<div class="row-fluid">	
-	<div class="span12">
-		<div id="good-for-sentence">
-		Verrazano Bridge
+<style>
+  /* Prevents slides from flashing */
+  #slides {
+    display:none;
+  }
+</style>
+
+<script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 940,
+        height: 528,
+		navigation: {
+		      active: false,
+		        // [boolean] Generates next and previous buttons.
+		        // You can set to false and use your own buttons.
+		        // User defined buttons must have the following:
+		        // previous button: class="slidesjs-previous slidesjs-navigation"
+		        // next button: class="slidesjs-next slidesjs-navigation"
+		      effect: "slide"
+		        // [string] Can be either "slide" or "fade".
+		    },
+			pagination: {
+			      active: false,
+			        // [boolean] Create pagination items.
+			        // You cannot use your own pagination. Sorry.
+			      effect: "slide"
+			        // [string] Can be either "slide" or "fade".
+			    },
+		play: {
+		      active: false,
+		        // [boolean] Generate the play and stop buttons.
+		        // You cannot use your own buttons. Sorry.
+		      effect: "slide",
+		        // [string] Can be either "slide" or "fade".
+		      interval: 3000,
+		        // [number] Time spent on each slide in milliseconds.
+		      auto: false,
+		        // [boolean] Start playing the slideshow on load.
+		      swap: true,
+		        // [boolean] show/hide stop and play buttons
+		      pauseOnHover: false,
+		        // [boolean] pause a playing slideshow on hover
+		      restartDelay: 2500
+		        // [number] restart delay on inactive slideshow
+		    }
+      });
+    });
+</script>
+
+
+<div class="row-fluid">
+	<div class="span4">
+  		<div id="slides">
+    <img src=<%= "#{vp["groups"][1]["items"][0].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][1].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][2].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][3].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][4].url}" %>>
+  	<img src=<%= "#{vp["groups"][1]["items"][5].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][6].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][7].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][8].url}" %>>
+    <img src=<%= "#{vp["groups"][1]["items"][9].url}" %>>
+	<img src=<%= "#{vp["groups"][1]["items"][10].url}" %>>
+	<a href="#" class="slidesjs-previous slidesjs-navigation">
+		<div class="nav-left"></div>
+	</a> 
+	<a href="#" class="slidesjs-next slidesjs-navigation">
+		<div class="nav-right"></div>
+	</a>
 		</div>
-	</div>	
+  </div>
 </div>
