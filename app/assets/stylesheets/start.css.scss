@@ -13,10 +13,12 @@
 }
 
 #bar1{
-	background-color:rgba(59, 64, 74, 1.000);
-	height:100px;
+	position:relative;
+	left:0;
+	top:60px;
 	width:100%;
-	box-shadow: inset 0px 0px 1px 1px #000;
+	background-color:rgba(59, 64, 74, 0.500);
+	height:40px;
 }
 
 #photo-copyright{

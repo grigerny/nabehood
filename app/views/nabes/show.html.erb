@@ -1,66 +1,41 @@
-<div class="row-fluid">
-	<div class="span12">
-		<div id="bar1">
-			<div id="nabe-heading">
-				New York > Brooklyn > <%= @nabe.name %>
-			</div>
-		</div>
-	</div>	
-</div>
-
 <div class="body-padding">
-
+	
 <p id="notice"><%= notice %></p>
 
 <div class="row-fluid">
 	<div class="span3">
 		<div id="cover-photo">
+			
+				<div id="bar1">
+					<div id="nabe-heading">
+						<%= @nabe.name %>
+					</div>
+				</div>
+			
+			
 			<a href="http://www.flickr.com/photos/violettalough/5795127998/" title="Hinsch by Violette79, on Flickr"><img src="http://farm3.staticflickr.com/2011/5795127998_87f6e3823a_b.jpg" width="100%" height="100%" alt="Hinsch"></a>			
-		</div>		
+		</div>	
 	</div>
 	
 	<div class="span9">
-			<div class="nabe-summary">
+		<div class="nabe-summary">
 				<div class='spacer'>
 				Safe, quiet, and diverse with good public schools, plenty of parks and a lively nightlife. The commute to Manhattan can take 40-50 minutes which keeps house values and rent prices low. 
 				</div>
 			</div>
 
-<div id="category-spacer">
-	
-			<div id="nabe-category">
-			Commute
-			</div>
-
-			<div id="nabe-category">
-			Raise a family
-			</div>		
-
-			<div id="nabe-category">
-				Nightlife 
-			</div>		
-
-			<div id="nabe-category">
-				Green space
-			</div>		
-
-			<div id="nabe-category">
-				Pet friendly
-			</div>		
-	
-			<div id="nabe-category">
-				Shopping
-			</div>		
-	
-			<div id="nabe-category">
-				Safety
-			</div>		
-		
-
-			<div id="nabe-category">
-				Trendy
+		<div id="category-spacer">
+			<div id="category-mini-header">
+			Popular tags for <%= @nabe.name %>
 			</div>	
-</div>		
+
+			<% @nabe.tags.order(:name).each do |tag| %>
+				<div id="nabe-category">
+					<%= tag.name %>
+				</div>
+				<% end %>
+				
+		</div>		
 				
 	</div>	
 
@@ -220,3 +195,5 @@
 		</div>
   </div>
 </div>
+
+
