@@ -2,15 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.body-padding{
+	   padding-left: 20px;
+	   padding-right: 20px;
+}
+
 .heading{
 	font-family: 'Josefin Slab', serif;
 	font-size:36px;
 }
 
 #bar1{
-	background-color:#E6E6E4;
-	height:1px;
+	background-color:rgba(59, 64, 74, 1.000);
+	height:100px;
 	width:100%;
+	box-shadow: inset 0px 0px 1px 1px #000;
 }
 
 #photo-copyright{
@@ -27,5 +33,9 @@
 
 a.nabe-link{
 	text-decoration:none;
+}
+
+#bikegang{
+	height:100%;
 }
 
