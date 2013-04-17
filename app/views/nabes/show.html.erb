@@ -20,7 +20,7 @@
 	<div class="span9">
 		<div class="nabe-summary">
 				<div class='spacer'>
-				Safe, quiet, and diverse with good public schools, plenty of parks and a lively nightlife. The commute to Manhattan can take 40-50 minutes which keeps house values and rent prices low. 
+				Safe, quiet, and diverse with good public schools, plenty of parks and a lively bar scene. The commute to Manhattan can take 40-50 minutes which keeps rent prices low and home prices reasonable.
 				</div>
 			</div>
 
@@ -51,28 +51,15 @@
 </div>
 </div>
 
+<div class="body-padding">
 <div class="row-fluid">
 	<div class="span12">
-		<div id="commute-heading">
-			Commute
-		</div>
+			<div id="nabe-category-body">
+				<% n = Nabe.find(1) %>
+				<%= n.tags.find(1).name %>
+			</div>
 	</div>
 </div>
-
-<div class="row-fluid">	
-	<div class="span6 offset1">
-		<div id="commute-transit-summary">
-			The commute to Manhattan is about 45-50 minutes
-		</div>	
-	</div>	
-</div>		
-
-
-<div class="row-fluid">
-	<div id="raise-family-heading">
-	Raise a family
-	</div>	
-</div>	
 
 <div class="row-fluid">
 <div class="span8">
@@ -84,6 +71,21 @@
 			</div>
 </div>
 </div>
+</div>
+
+
+<div class="row-fluid">	
+	<div class="span6 offset1">
+		<div id="commute-transit-summary">
+			The commute to Manhattan is about 45-50 minutes
+		</div>	
+	</div>	
+</div>		
+
+
+
+
+
 
 
 
@@ -195,5 +197,3 @@
 		</div>
   </div>
 </div>
-
-
