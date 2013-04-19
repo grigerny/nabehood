@@ -39,5 +39,20 @@ a.nabe-link{
 
 #bikegang{
 	height:100%;
+	width:100%;
 }
+
+.nabe-link{
+	position:relative;
+	left:300px;
+	top:300px;
+	color:rgba(251, 251, 251, 1.000);
+}
+
+.nabe-link:hover{
+		border:5px solid rgba(101, 154, 192, 1.000);
+}
+
+
+
 

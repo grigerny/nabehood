@@ -10,23 +10,20 @@
 
 </head>
 <body>
+	<div class="body-padding">
 		
 	<% if user_signed_in? %>
-	  Logged in as <strong><%= current_user.username %></strong>.
+	  Logged in as <strong><%= current_user.username %></strong>
 	  <%= link_to 'Edit profile', edit_user_registration_path %> |
 	  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 	<% else %>
-	  <%= link_to "Sign up", new_user_registration_path %> |
-	  <%= link_to "Login", new_user_session_path %>
-	<% end %>
-
-<p class="notice"><%= notice %></p>
-
+	  <%= link_to (image_tag "connect-blue2x.png"), user_omniauth_authorize_path(:foursquare) %>
+	<% end %> 
+	<p class="notice"><%= notice %></p>
+	
+	</div>
 	
 <%= yield %>
-
-
-
 
 </body>
 </html>

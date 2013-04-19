@@ -20,17 +20,19 @@
 	line-height:40px;
 	color:rgba(51, 51, 51, 1.000);
 	text-align:left;
-	margin-top:40px;
 }
 
 .spacer {
    padding:0 20px;
 }
 
-#cover-photo{
+.photo{
 	position:relative;
 	margin-bottom:40px;
 	width:100%;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+	        box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
 }
 
 #nabe-map{
@@ -61,6 +63,7 @@
 	padding:10px;
 	color:rgba(58, 63, 74, 1.000);
 	box-shadow:0px 1px 2px #999;
+	width:100%;
 }
 
 

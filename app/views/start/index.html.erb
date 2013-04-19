@@ -1,21 +1,22 @@
+<div class="container">
 <div class="row-fluid">
 	<div class="span12">
 		<div id="bikegang">
-			<%= image_tag "bikegang.jpg", :size => "960x650"  %>
+				<div class="start-nabe-heading">
+				<%= link_to city_nabe_path(1,1), :class => "nabe-link"  do %>
+				<%= "Bay Ridge" %>
+				<% end %>
+				</div>
+			<%= image_tag "bikegang.jpg"  %>
 		</div>
 	</div>
 </div>	
+
 
 <div class="row-fluid">
 	<div id="photo-copyright">
 	<%= link_to "Photo", 'http://www.flickr.com/photos/pixietart/4184841/sizes/z/in/photostream/' %> (<%= link_to "cc", "http://creativecommons.org/licenses/by-sa/2.0/" %>) flickr user <%= link_to "pixietart", "http://www.flickr.com/photos/pixietart/" %>
 	</div>
 </div>
-
-<div class="row-fluid">
-	<div class="span12">
-		<%= link_to city_nabe_path(1,1), :class => "nabe-link"  do %>
-		<%= "Bay Ridge" %>
-		<% end %>
-		</div>
-</div>		
+</div>
+	
