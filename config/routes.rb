@@ -3,8 +3,10 @@ Nabehood::Application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   resources :cities do 
-    resources :nabes
-  end  
+    resources :nabes do 
+        resources :buildings
+    end  
+  end
   
   get "start/index"
 
